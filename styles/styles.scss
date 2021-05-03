@@ -1,0 +1,20 @@
+$header1: 3rem;
+$header2: 4.8rem;
+$header3: 2.5rem;
+$header4: 2rem;
+$text: 2.5rem;
+$pink-text: #ff51fc;
+$grey-text: #2c2c2c;
+$poppins: "Poppins", sans-serif;
+$roboto: "Roboto", sans-serif;
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@import "./global";
+@import "./header";
+@import "./intro";

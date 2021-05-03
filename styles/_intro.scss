@@ -1,0 +1,76 @@
+.intro {
+  min-height: 90vh;
+  width: 90%;
+  margin: 0 auto;
+  @include flex(space-between, center, row);
+  flex-wrap: wrap;
+}
+
+.intro-text {
+  @include flex(space-around, center, column);
+  flex: 2 1 30rem;
+
+  h2 {
+    letter-spacing: 0.6rem;
+    font-weight: 400;
+
+    span {
+      color: $pink-text;
+    }
+  }
+  p {
+    padding-top: 3rem;
+  }
+}
+
+.intro-img {
+  flex: 1 1 30rem;
+}
+
+#dogtail {
+  animation: tail 1s infinite alternate;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+#tree1,
+#tree2,
+#tree3 {
+  animation: tree 2s infinite alternate;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+#bird,
+#bird_2,
+#bird_3 {
+  animation: bird 30s ease forwards;
+  background: $pink-text;
+}
+
+@keyframes tail {
+  from {
+    transform: rotateZ(-10deg);
+  }
+  to {
+    transform: rotateZ(15deg);
+  }
+}
+
+@keyframes tree {
+  from {
+    transform: rotateZ(-1deg);
+  }
+  to {
+    transform: rotateZ(1deg);
+  }
+}
+
+@keyframes bird {
+  from {
+    transform: translate(0%, 0%);
+  }
+  to {
+    transform: translate(100%, 10%);
+  }
+}
